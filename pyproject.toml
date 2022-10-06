@@ -1,0 +1,39 @@
+[build-system]
+requires = [
+    "setuptools>=61",
+    "setuptools_scm>=6.2",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clickconf"
+description = "Easy persistant configuration for tools written with Click"
+readme = "README.md"
+authors = [{ name = "Andrew Cassidy", email = "drewcassidy@me.com" }]
+keywords = ["click", "config", "toml"]
+
+requires-python = ">= 3.8"
+dependencies = [
+    "Click >= 7.0",
+    "tomlkit >= 0.11"
+
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+docs = [
+    "Sphinx >= 3.5",
+    "sphinx-click >= 2.7",
+    "sphinx-rtd-theme",
+    "myst-parser >= 0.14",
+]
+
+[project.urls]
+Source = "https://github.com/drewcassidy/clickconf"
+Changelog = "https://github.com/drewcassidy/clickconf/blob/main/CHANGELOG.md"
+
+[tool.setuptools_scm]
+
+[tool.setuptools.packages.find]
+include = ["clickconf"]
